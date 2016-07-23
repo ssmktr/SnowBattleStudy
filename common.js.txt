@@ -1,0 +1,3 @@
+function KTJ(){
+	alert("GIT start");
+}
