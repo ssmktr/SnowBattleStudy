@@ -10,8 +10,6 @@ public class UnitBase : MonoBehaviour {
 
         Walk_Forward,
         Walk_Back,
-        Walk_Right,
-        Walk_Left,
 
         Run_Forward,
         Run_Back,
@@ -25,10 +23,10 @@ public class UnitBase : MonoBehaviour {
         DicAnimation.Add(AniType.Idle, "Idle");
         DicAnimation.Add(AniType.Walk_Forward, "Walk_Forward");
         DicAnimation.Add(AniType.Walk_Back, "Walk_Back");
-        DicAnimation.Add(AniType.Walk_Right, "Walk_Right");
-        DicAnimation.Add(AniType.Walk_Left, "Walk_Left");
         DicAnimation.Add(AniType.Run_Forward, "Run_Forward");
         DicAnimation.Add(AniType.Run_Back, "Run_Back");
+
+        Anim.speed = 3f;
     }
 
     void Update()
@@ -60,17 +58,12 @@ public class UnitBase : MonoBehaviour {
         {
             SetAnimation(AniType.Walk_Back);
         }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            SetAnimation(AniType.Walk_Right);
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            SetAnimation(AniType.Walk_Left);
-        }
         else
         {
             SetAnimation(AniType.Idle);
         }
+
+        float v = Input.GetAxis("Horizontal");
+        transform.Rotate(Vector3.up * v * Time.deltaTime * 120);
     }
 }
