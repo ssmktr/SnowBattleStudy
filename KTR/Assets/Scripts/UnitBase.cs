@@ -66,4 +66,18 @@ public class UnitBase : MonoBehaviour {
         float v = Input.GetAxis("Horizontal");
         transform.Rotate(Vector3.up * v * Time.deltaTime * 120);
     }
+
+    void OnTriggerEnter(Collider coll)
+    {
+        switch (coll.name)
+        {
+            case "Battle001Gate":
+                GameMgr.GoScene("Battle001");
+                break;
+
+            case "MainGate":
+                GameMgr.GoScene("Main");
+                break;
+        };
+    }
 }
