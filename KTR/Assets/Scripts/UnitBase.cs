@@ -14,10 +14,9 @@ public class UnitBase : MonoBehaviour {
         Run_Forward,
         Run_Back,
     };
+    Dictionary<AniType, string> DicAnimation = new Dictionary<AniType, string>();
 
     public Animator Anim;
-
-    Dictionary<AniType, string> DicAnimation = new Dictionary<AniType, string>();
 
 	void Start () {
         DicAnimation.Add(AniType.Idle, "Idle");
