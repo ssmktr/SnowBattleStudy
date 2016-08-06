@@ -6,7 +6,7 @@ public class SnowBullet : MonoBehaviour {
     float SnowBulletSpeed = 800f;
     System.Action HitCallBack;
 
-    public void Fire (Vector3 dir, System.Action _hitCallBack)
+    public void Fire (Vector3 dir, System.Action _hitCallBack = null)
     {
         GetComponent<Rigidbody>().AddForce(dir * SnowBulletSpeed);
         HitCallBack = _hitCallBack;
