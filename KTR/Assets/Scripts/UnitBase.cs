@@ -61,7 +61,7 @@ public class UnitBase : MonoBehaviour {
             SetAnimation(AniType.Idle);
         }
 
-        if (!bAttack)
+        if (!bAttack && transform.localPosition.y < 2)
         {
             if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
             {
@@ -82,6 +82,8 @@ public class UnitBase : MonoBehaviour {
             else
                 SetAnimation(AniType.Idle);
         }
+        else
+            SetAnimation(AniType.Idle);
 
         float v = Input.GetAxis("Horizontal");
         transform.Rotate(Vector3.up * v * Time.deltaTime * 120);
