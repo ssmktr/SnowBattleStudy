@@ -460,6 +460,7 @@ MonoBehaviour:
   Target: {fileID: 544197337}
   SnowFirePoint: {fileID: 1163225775}
   Anim: {fileID: 32814003}
+  Battle: {fileID: 2039374005}
 --- !u!136 &32814001
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3091,6 +3092,7 @@ MonoBehaviour:
   Target: {fileID: 544197337}
   SnowFirePoint: {fileID: 1865270}
   Anim: {fileID: 310574006}
+  Battle: {fileID: 2039374005}
 --- !u!136 &310574004
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3246,6 +3248,7 @@ MonoBehaviour:
   Target: {fileID: 544197337}
   SnowFirePoint: {fileID: 1987292375}
   Anim: {fileID: 326617307}
+  Battle: {fileID: 2039374005}
 --- !u!136 &326617305
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3920,6 +3923,7 @@ MonoBehaviour:
   Target: {fileID: 544197337}
   SnowFirePoint: {fileID: 1993928188}
   Anim: {fileID: 395962263}
+  Battle: {fileID: 2039374005}
 --- !u!136 &395962261
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4973,6 +4977,88 @@ Transform:
   - {fileID: 439345366}
   m_Father: {fileID: 757285420}
   m_RootOrder: 0
+--- !u!1 &519313440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 519313441}
+  - 114: {fileID: 519313442}
+  m_Layer: 8
+  m_Name: Foreground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &519313441
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 519313440}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1598201868}
+  m_RootOrder: 1
+--- !u!114 &519313442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 519313440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  rightAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  bottomAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  topAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  updateAnchors: 1
+  mColor: {r: 1, g: 0, b: 0, a: 1}
+  mPivot: 3
+  mWidth: 300
+  mHeight: 60
+  mDepth: 1
+  autoResizeBoxCollider: 0
+  hideIfOffScreen: 0
+  keepAspectRatio: 0
+  aspectRatio: 5
+  mType: 1
+  mFillDirection: 4
+  mFillAmount: 1
+  mInvert: 0
+  mFlip: 0
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  centerType: 1
+  leftType: 1
+  rightType: 1
+  bottomType: 1
+  topType: 1
+  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
+  mSpriteName: Highlight - Shadowed
+  mFillCenter: 1
 --- !u!1 &520973122
 GameObject:
   m_ObjectHideFlags: 0
@@ -8606,6 +8692,7 @@ MonoBehaviour:
   Target: {fileID: 544197337}
   SnowFirePoint: {fileID: 409439992}
   Anim: {fileID: 937984025}
+  Battle: {fileID: 2039374005}
 --- !u!136 &937984023
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8822,6 +8909,7 @@ MonoBehaviour:
   Target: {fileID: 544197337}
   SnowFirePoint: {fileID: 1223904774}
   Anim: {fileID: 959796307}
+  Battle: {fileID: 2039374005}
 --- !u!136 &959796305
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11978,6 +12066,88 @@ Transform:
   - {fileID: 1496687883}
   m_Father: {fileID: 1897412761}
   m_RootOrder: 1
+--- !u!1 &1297018813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1297018814}
+  - 114: {fileID: 1297018815}
+  m_Layer: 8
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1297018814
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1297018813}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1598201868}
+  m_RootOrder: 0
+--- !u!114 &1297018815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1297018813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  rightAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  bottomAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  topAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  updateAnchors: 1
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 3
+  mWidth: 300
+  mHeight: 60
+  mDepth: 0
+  autoResizeBoxCollider: 0
+  hideIfOffScreen: 0
+  keepAspectRatio: 0
+  aspectRatio: 5
+  mType: 1
+  mFillDirection: 4
+  mFillAmount: 1
+  mInvert: 0
+  mFlip: 0
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  centerType: 1
+  leftType: 1
+  rightType: 1
+  bottomType: 1
+  topType: 1
+  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
+  mSpriteName: Highlight - Thin
+  mFillCenter: 1
 --- !u!1 &1299363856
 GameObject:
   m_ObjectHideFlags: 0
@@ -12086,6 +12256,7 @@ MonoBehaviour:
   Target: {fileID: 544197337}
   SnowFirePoint: {fileID: 842730410}
   Anim: {fileID: 1313535114}
+  Battle: {fileID: 2039374005}
 --- !u!136 &1313535112
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14113,6 +14284,7 @@ MonoBehaviour:
   Target: {fileID: 544197337}
   SnowFirePoint: {fileID: 897905395}
   Anim: {fileID: 1567383148}
+  Battle: {fileID: 2039374005}
 --- !u!136 &1567383146
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14188,6 +14360,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 864247985}
+  - {fileID: 1598201868}
   m_Father: {fileID: 1846504670}
   m_RootOrder: 0
 --- !u!1 &1573233867
@@ -14456,6 +14629,59 @@ Transform:
   - {fileID: 1317150508}
   m_Father: {fileID: 2124895791}
   m_RootOrder: 0
+--- !u!1 &1598201867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1598201868}
+  - 114: {fileID: 1598201869}
+  m_Layer: 8
+  m_Name: ProgressBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1598201868
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1598201867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -585, y: 316, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1297018814}
+  - {fileID: 519313441}
+  m_Father: {fileID: 1569969734}
+  m_RootOrder: 1
+--- !u!114 &1598201869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1598201867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c20815eb3063c24290a61b7020a1836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thumb: {fileID: 0}
+  mBG: {fileID: 0}
+  mFG: {fileID: 519313442}
+  mValue: 1
+  mFill: 0
+  numberOfSteps: 0
+  onChange: []
+  foreground: {fileID: 0}
+  rawValue: 1
+  direction: 2
+  mInverted: 0
 --- !u!1 &1598272601
 GameObject:
   m_ObjectHideFlags: 0
@@ -14593,6 +14819,7 @@ MonoBehaviour:
   Target: {fileID: 544197337}
   SnowFirePoint: {fileID: 2130405249}
   Anim: {fileID: 1603150909}
+  Battle: {fileID: 2039374005}
 --- !u!136 &1603150907
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17069,7 +17296,7 @@ GameObject:
   - 114: {fileID: 1867470311}
   m_Layer: 9
   m_Name: Unit
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17131,8 +17358,8 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: 320b1c2af77554f99a1658df4a6d3d5c, type: 3}
   m_Controller: {fileID: 9100000, guid: 0053518f36cd8164fa5739fce4fff8b0, type: 2}
   m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -17245,6 +17472,7 @@ MonoBehaviour:
   Target: {fileID: 544197337}
   SnowFirePoint: {fileID: 1081232473}
   Anim: {fileID: 1877837716}
+  Battle: {fileID: 2039374005}
 --- !u!136 &1877837714
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -18631,6 +18859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ccdd6f4bc3ae843a22afc088de6e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ProgressBar: {fileID: 1598201869}
   MainCamera: {fileID: 490522589}
   CharCamera: {fileID: 440418539}
   MessageRoot: {fileID: 864247984}

@@ -3,11 +3,15 @@ using System.Collections;
 
 public class Battle : MonoBehaviour {
 
+    public UIProgressBar ProgressBar;
     public Camera MainCamera, CharCamera;
     public GameObject MessageRoot;
+
+    int CurHp = 10;
+    int MaxHp = 10;
 	void Start () {
-	    
-	}
+        ProgressBar.value = (float)CurHp / MaxHp;
+    }
 
     void Update()
     {
@@ -33,5 +37,14 @@ public class Battle : MonoBehaviour {
         panel.transform.FindChild("MsgLbl").GetComponent<UILabel>().text = _msg;
 
         Destroy(panel, 1f);
+    }
+
+    public void OnDamage()
+    {
+        CurHp--;
+        ProgressBar.value = (float)CurHp / MaxHp;
+
+        if (CurHp <= 0)
+            Time.timeScale = 0.1f;
     }
 }

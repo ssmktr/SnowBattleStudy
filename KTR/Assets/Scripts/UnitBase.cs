@@ -21,6 +21,7 @@ public class UnitBase : MonoBehaviour {
     public Battle Battle;
     public Animator Anim;
     bool bAttack = false;
+    float MoveSpeed = 10f;
 
     public GameObject SnowBullet, SnowFirePoint;
 
@@ -32,7 +33,7 @@ public class UnitBase : MonoBehaviour {
         DicAnimation.Add(AniType.Run_Back, "Run_Back");
         DicAnimation.Add(AniType.Attack, "Attack");
 
-        Anim.speed = 3f;
+        Anim.speed = 5f;
     }
 
     void Update()
@@ -70,10 +71,12 @@ public class UnitBase : MonoBehaviour {
             else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.LeftShift))
             {
                 SetAnimation(AniType.Run_Back);
+                transform.Translate(-Vector3.forward * Time.deltaTime * MoveSpeed);
             }
             else if (Input.GetKey(KeyCode.W))
             {
                 SetAnimation(AniType.Walk_Forward);
+                transform.Translate(Vector3.forward * Time.deltaTime * MoveSpeed);
             }
             else if (Input.GetKey(KeyCode.S))
             {

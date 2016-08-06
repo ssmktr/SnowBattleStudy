@@ -24,5 +24,14 @@ public class SnowBullet : MonoBehaviour {
             Destroy(coll.gameObject);
             Destroy(gameObject);
         }
+        else if (coll.tag == "Player")
+        {
+            if (HitCallBack != null)
+            {
+                HitCallBack();
+            }
+
+            Destroy(gameObject);
+        }
     }
 }

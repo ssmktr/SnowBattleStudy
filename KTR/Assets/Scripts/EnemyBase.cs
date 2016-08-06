@@ -6,6 +6,8 @@ public class EnemyBase : MonoBehaviour {
     public GameObject SnowBullet;
     public Transform Target, SnowFirePoint;
     public Animator Anim;
+    public Battle Battle;
+
     float AttackTime = 0.0f;
     float AttackRangeTime = 2.0f;
 
@@ -24,7 +26,14 @@ public class EnemyBase : MonoBehaviour {
                 Fire();
                 AttackTime = 0f;
             }
+            else
+            {
+                Anim.Play("Walk_Forward");
+                transform.Translate(Vector3.forward * Time.deltaTime * 3f);
+            }
         }
+        else
+            Anim.Play("Idle");
         AttackTime += Time.deltaTime;
 	}
 
@@ -32,8 +41,17 @@ public class EnemyBase : MonoBehaviour {
     {
         GameObject Snow = (GameObject)Instantiate(SnowBullet);
         Snow.transform.position = SnowFirePoint.position;
-        Snow.GetComponent<SnowBullet>().Fire(transform.forward);
+        Snow.GetComponent<SnowBullet>().Fire(transform.forward, OnMessage);
 
         Destroy(Snow, 3f);
+    }
+
+    void OnMessage()
+    {
+        if (Battle != null)
+        {
+            Battle.OnDamage();
+            Battle.OnMessage("Damaged...");
+        }
     }
 }
