@@ -13,17 +13,24 @@ public class UnitBase : MonoBehaviour {
 
         Run_Forward,
         Run_Back,
+
+        Attack,
     };
     Dictionary<AniType, string> DicAnimation = new Dictionary<AniType, string>();
 
+    public Battle Battle;
     public Animator Anim;
+    bool bAttack = false;
 
-	void Start () {
+    public GameObject SnowBullet, SnowFirePoint;
+
+    void Start () {
         DicAnimation.Add(AniType.Idle, "Idle");
         DicAnimation.Add(AniType.Walk_Forward, "Walk_Forward");
         DicAnimation.Add(AniType.Walk_Back, "Walk_Back");
         DicAnimation.Add(AniType.Run_Forward, "Run_Forward");
         DicAnimation.Add(AniType.Run_Back, "Run_Back");
+        DicAnimation.Add(AniType.Attack, "Attack");
 
         Anim.speed = 3f;
     }
@@ -41,25 +48,39 @@ public class UnitBase : MonoBehaviour {
 
     public virtual void ControlAnimation()
     {
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            SetAnimation(AniType.Run_Forward);
+            bAttack = true;
+            SetAnimation(AniType.Attack);
+
+            ThrowSnow();
         }
-        else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.LeftShift))
+        else if (Input.GetKeyUp(KeyCode.Space))
         {
-            SetAnimation(AniType.Run_Back);
-        }
-        else if (Input.GetKey(KeyCode.W))
-        {
-            SetAnimation(AniType.Walk_Forward);
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            SetAnimation(AniType.Walk_Back);
-        }
-        else
-        {
+            bAttack = false;
             SetAnimation(AniType.Idle);
+        }
+
+        if (!bAttack)
+        {
+            if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
+            {
+                SetAnimation(AniType.Run_Forward);
+            }
+            else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.LeftShift))
+            {
+                SetAnimation(AniType.Run_Back);
+            }
+            else if (Input.GetKey(KeyCode.W))
+            {
+                SetAnimation(AniType.Walk_Forward);
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                SetAnimation(AniType.Walk_Back);
+            }
+            else
+                SetAnimation(AniType.Idle);
         }
 
         float v = Input.GetAxis("Horizontal");
@@ -79,4 +100,22 @@ public class UnitBase : MonoBehaviour {
                 break;
         };
     }
+
+    void ThrowSnow()
+    {
+        GameObject Snow = (GameObject)Instantiate(SnowBullet);
+        Snow.transform.position = SnowFirePoint.transform.position;
+        Snow.GetComponent<SnowBullet>().Fire(transform.forward, OnMessage);
+
+        Destroy(Snow, 3f);
+    }
+
+    void OnMessage()
+    {
+        if (Battle != null)
+        {
+            Battle.OnMessage("HIT!!");
+        }
+    }
 }
+
