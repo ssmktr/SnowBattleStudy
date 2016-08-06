@@ -3,10 +3,25 @@ using System.Collections;
 
 public class Battle : MonoBehaviour {
 
+    public Camera MainCamera, CharCamera;
     public GameObject MessageRoot;
 	void Start () {
 	    
 	}
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Tab))
+        {
+            MainCamera.gameObject.SetActive(true);
+            CharCamera.gameObject.SetActive(false);
+        }
+        else
+        {
+            MainCamera.gameObject.SetActive(false);
+            CharCamera.gameObject.SetActive(true);
+        }
+    }
 
     public void OnMessage(string _msg)
     {

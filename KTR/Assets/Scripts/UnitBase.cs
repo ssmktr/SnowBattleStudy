@@ -89,20 +89,6 @@ public class UnitBase : MonoBehaviour {
         transform.Rotate(Vector3.up * v * Time.deltaTime * 120);
     }
 
-    void OnTriggerEnter(Collider coll)
-    {
-        switch (coll.name)
-        {
-            case "Battle001Gate":
-                GameMgr.GoScene("Battle001");
-                break;
-
-            case "MainGate":
-                GameMgr.GoScene("Main");
-                break;
-        };
-    }
-
     void ThrowSnow()
     {
         GameObject Snow = (GameObject)Instantiate(SnowBullet);
