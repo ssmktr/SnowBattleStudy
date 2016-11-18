@@ -1,0 +1,77 @@
+Report created: 
+	28.05.2013	11:42:07
+
+Project name: Hight Tech HUD Elements.aep
+
+Source files collected to: 
+	A:\PROJECT SOURCE\AE Templates\Tech HUD Bundle\Hight Tech HUD Elements folder
+
+Source files collected: All
+
+Collected comps:  
+	COMPASS
+	Atlitude Count_precomp
+	Numbers_precomp
+	Trainrail Circle
+	Compass Circle 01
+	Dot Line Circle
+	Interface Display 02
+	Segment Circle 01
+	Segment Circle 02
+	Degree Circle
+	Full Screen Crosshair1
+	Crosshair 01
+	Cross_precomp
+	EARTH SCAN
+	Lines_precomp
+	Lines
+	Segment Circle 03
+	Grid
+	Radio Waves
+	Earth_precomp
+	Earth
+	COMPASS RADAR
+	3D COMPASS RADAR
+	3D COMPASS 
+	3D EARTH SCAN
+	Segment Circle 04
+	Grid 2
+	Segment Circle 05
+	Interface Display 01
+	ELEMENTS_Preview
+	
+Number of collected files:  2
+
+Size of collected files:  3,0 MB
+
+Collected source files: 
+	A:\Elements&Training\Envato Birthday Bundle 2011\AudioJungle\AudioJungle\glitchy-digital-crystal-logo-07\Glitchy Digital Crystal Logo #07.wav
+	A:\Elements&Training\Textures\Planeten\Earth spec1024.jpg
+	
+Rendering plug-ins:
+	Advanced 3D
+	
+Effects used:  8
+
+Effect:  Beam
+	
+Effect:  CC Sphere
+	
+Effect:  CC Toner
+	
+Effect:  Grid
+	
+Effect:  Polar Coordinates
+	
+Effect:  Radio Waves
+	
+Effect:  Stroke
+	
+Effect:  Tint
+	
+
+Layer:  Text Layer
+	External dependencies:  
+		Font family: 'Arial', Font style: 'Bold'
+		Font family: 'Arial', Font style: 'Regular'
+
